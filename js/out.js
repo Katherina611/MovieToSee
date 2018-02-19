@@ -70,6 +70,58 @@
 "use strict";
 
 
+var $section = $('.movies');
+function addUser() {
+    var btn = $section.find('input[type=submit]');
+    var $movie = $section.find('#addMovie');
+    var $description = $section.find('#addDesc');
+    var $images = $section.find('#addImg');
+    var $li = $section.find('li').find('span');
+    var newBtn = $('<button class="button1">Oglądnąłem</button>');
+    var editBtn = $('<button class="button2">Edytuj tytuł</button>');
+    $li.append(newBtn);
+    $li.append(editBtn);
+
+    btn.on('click', function () {
+        var movieVal = $movie.val();
+        var descVAl = $description.val();
+        var imgVal = $images.val();
+
+        var $newLi = $('<li>');
+        var $newSpan = $('<span>');
+        var $newDecription = $('<p>');
+        var $newImage = $('<img>');
+        var newBtn = $('<button class="button1">Oglądnąłem</button>');
+        var editBtn = $('<button class="button2">Edytuj tytuł</button>');
+        $newImage.attr('src', imgVal);
+        $newSpan.text(movieVal);
+        $newDecription.text(descVAl);
+
+        $section.find('ul').append($newLi);
+        $newLi.append($newSpan);
+        $newLi.append($newDecription);
+        $newLi.append($newImage);
+        $newSpan.append(newBtn);
+        $newSpan.append(editBtn);
+    });
+}
+
+$('body').on('click', '.button1', function () {
+    $(this).parent().parent().remove();
+});
+$('body').on('click', '.button2', function () {
+    $(this).parent().attr("contenteditable", "true");
+    $(this).attr("class", "accept");
+    $(this).text("Zatwierdź");
+});
+$('body').on('click', '.accept', function () {
+    $(this).parent().attr("contenteditable", "false");
+    $(this).attr("class", "button2");
+    $(this).text("Edit");
+});
+
+addUser();
+
 /***/ })
 /******/ ]);
 //# sourceMappingURL=out.js.map
