@@ -1,12 +1,56 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
 body{
     background-image: url("./../images/movie.jpg");
 }
 label{
     font-size: 18px;
-    color:white;
+    color:black;
 }
 img{
     opacity:0.7;
     height:200px;
     width:300px;
+}
+.movies{
+    display:flex;
+    flex-direction: column;
+}
+label{
+    text-align: center;
+}
+input{
+    text-align: center;
+    width:200px;
+    height:30px;
+    margin-top: 10px;
+    opacity:0.8;
+}
+.btn{
+    width:100px;
+    height:30px;
+    position: absolute;
+    left:600px;
+    border-radius: 10%;
+    opacity:0.8;
+}
+textarea{
+    text-align: center;
+    width:200px;
+    height:30px;
+    margin-top: 10px;
+    opacity:0.8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    list-style: square;
+    margin-top: 40px;
+    color: lightgrey;
+}
+button{
+    margin: 0 10px;
 }

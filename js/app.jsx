@@ -4,11 +4,6 @@ function addUser(){
     let $movie = $section.find('#addMovie');
     let $description=$section.find('#addDesc');
     let $images=$section.find('#addImg');
-    let $li=$section.find('li').find('span');
-    let newBtn = $('<button class="button1">Oglądnąłem</button>');
-    let editBtn = $('<button class="button2">Edytuj tytuł</button>');
-    $li.append(newBtn);
-    $li.append(editBtn);
 
     btn.on('click', function(){
         let movieVal = $movie.val();
@@ -25,12 +20,13 @@ function addUser(){
         $newSpan.text(movieVal);
         $newDecription.text(descVAl);
 
+
         $section.find('ul').append($newLi);
         $newLi.append($newSpan);
         $newLi.append($newDecription);
         $newLi.append($newImage);
-        $newSpan.append(newBtn);
-        $newSpan.append(editBtn);
+        $newLi.append(newBtn);
+        $newLi.append(editBtn);
     })
 
 }
