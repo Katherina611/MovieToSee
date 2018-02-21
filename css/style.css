@@ -3,10 +3,12 @@
 }
 body{
     background-image: url("./../images/movie.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 label{
     font-size: 18px;
-    color:black;
+    color:white;
 }
 img{
     opacity:0.7;
@@ -53,4 +55,8 @@ li{
 }
 button{
     margin: 0 10px;
+}
+.star1,.star2,.star3,.star4,.star5{
+    font-size:30px;
+
 }
