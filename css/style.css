@@ -32,8 +32,6 @@ input{
 .btn{
     width:100px;
     height:30px;
-    position: absolute;
-    left:600px;
     border-radius: 10%;
     opacity:0.8;
 }
@@ -44,15 +42,19 @@ textarea{
     margin-top: 10px;
     opacity:0.8;
 }
+
 .main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 li{
     list-style: square;
     margin-top: 40px;
     color: lightgrey;
+    margin-right:40px;
 }
+
 button{
     margin: 0 10px;
 }
